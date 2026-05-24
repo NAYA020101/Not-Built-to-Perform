@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About / Yifan LIU</title>
-    <link rel="stylesheet" href="/style.css">
     <style>
         /* 全局样式 */
         * {
@@ -20,14 +19,14 @@
             color: #fff;
         }
 
-        /* 背景 */
+        /* 背景 —— 路径已修复 ✅ */
         .about-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('../images/2.png');
+            background-image: url('/images/2.png');
             background-size: cover;
             background-position: center;
             z-index: -2;
@@ -99,59 +98,41 @@
 </head>
 <body class="about-page">
 
-    <!-- 返回主页按钮 -->
-    <a href="../index.html" class="back-btn">← Back to Home</a>
+    <!-- 返回主页按钮 —— 路径已修复 ✅ -->
+    <a href="/index.html" class="back-btn">← Back to Home</a>
 
-    <!-- 梦幻背景图 2.png -->
+    <!-- 背景 + 星光 -->
     <div class="about-bg"></div>
-    <!-- 星光动画层 -->
     <div class="about-star-layer"></div>
 
-    <!-- 页面容器：左右分栏结构 -->
+    <!-- 页面内容 -->
     <div class="about-container">
-        <!-- 左侧栏：固定标题 -->
         <div class="about-left">
             <h1 class="about-title">Yifan LIU / NAYA</h1>
         </div>
 
-        <!-- 右侧栏：滚动文字内容 -->
         <div class="about-right">
             <div class="scroll-text-content">
                 <p>After the college entrance exam,<br>I realized<br>I did not really have a dream.</p>
-
                 <p>I only wanted to spend my life<br>in a quiet library,<br>working as a librarian.</p>
-
                 <p>Later,<br>I found out that even librarians<br>were starting to need PhDs.</p>
-
                 <p>So I moved to the UK.</p>
-
                 <p>I spent my days studying STS,<br>and learning how to make stew<br>that tasted less lonely.</p>
-
                 <p>I research algorithms,<br>intimacy,<br>otome games,<br>and AI.</p>
-
                 <p>I also think a lot about<br>why people are constantly asked<br>to prove their value.</p>
-
                 <p>To look like an intellectual person,<br>I published papers.</p>
-
                 <p>To leave something behind,<br>I wrote novels.</p>
-
                 <p>But papers do not change life.<br>And the novels never made much noise.</p>
-
                 <p>An editor once told me<br>that the market prefers suffering women,<br>obedient wives,<br>and easy emotional stimulation.</p>
-
                 <p>Not complicated feelings.<br>Not difficult women.</p>
-
                 <p>Still,<br>I want to write.</p>
-
                 <p>About emotions that platforms<br>cannot easily categorize.</p>
-
                 <p>About hesitation,<br>dependency,<br>softness,<br>silence,<br>and the kind of love<br>people struggle to understand.</p>
             </div>
         </div>
     </div>
 
     <script>
-        // 自动生成星光（About 页面专用）
         const starLayer = document.querySelector('.about-star-layer');
         for(let i=0; i<50; i++){
             let star = document.createElement('div');
