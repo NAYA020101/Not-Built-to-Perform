@@ -18,14 +18,14 @@ html, body {
   background: #0a0a0a;
 }
 
-/* 背景 —— 已修复 ✅ */
+/* 背景图 👉 已经改成 14.png ✅ */
 .liquid-background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/images/1.png');
+  background-image: url('/images/14.png');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -97,12 +97,9 @@ html, body {
 </head>
 
 <body>
-  <!-- 背景 -->
   <div class="liquid-background"></div>
-  <!-- 星光 -->
   <div class="home-star-layer" id="starLayer"></div>
 
-  <!-- 内容 -->
   <div class="intro-page">
     <div class="intro-title">Not Built to Perform</div>
     <div class="menu-list">
@@ -115,7 +112,6 @@ html, body {
   </div>
 
 <script>
-// 星光生成
 const starLayer = document.getElementById('starLayer');
 for(let i=0; i<50; i++){
   const star = document.createElement('div');
