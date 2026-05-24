@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANIFESTO</title>
+<style>
+/* 全局清理 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: "Times New Roman", serif;
+}
+
+/* 13.png 全屏背景 */
+.bg-img {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url('../images/13.png') center center / cover no-repeat;
+  z-index: -1;
+}
+
+/* 返回按钮 */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.1rem;
+  color: #000;
+  text-decoration: none;
+  font-weight: bold;
+  z-index: 999;
+}
+
+/* 左右两列布局 */
+.manifesto-container {
+  min-height: 100vh;
+  padding: 14vh 8vw;
+  display: flex;
+  gap: 6rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.column {
+  flex: 1;
+  max-width: 420px;
+  background: rgba(255,255,255,0.65);
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+/* 加深文字颜色，提升清晰度 */
+.manifesto-container p {
+  font-size: clamp(1.25rem, 3.5vw, 1.8rem);
+  line-height: 1.9;
+  margin-bottom: 2.2rem;
+  text-align: left;
+  color: #000;
+  font-weight: 500;
+}
+</style>
+</head>
+
+<body>
+<!-- 背景图 -->
+<div class="bg-img"></div>
+
+<!-- 返回按钮 -->
+<a href="../index.html" class="back-btn">← Back</a>
+
+<!-- 左右两列宣言内容 -->
+<div class="manifesto-container">
+  <div class="column">
+    <p>I do not want to become<br>a perfectly functioning machine.</p>
+    <p>I do not want human value<br>to be defined by productivity.</p>
+    <p>I refuse to spend my entire life competing.</p>
+    <p>I refuse to treat excellence<br>as the only acceptable way to exist.</p>
+    <p>Tears are not weakness.</p>
+    <p>Sensitivity is not a flaw.</p>
+  </div>
+
+  <div class="column">
+    <p>I believe that intimacy,<br>love,<br>and pain<br>should never be compressed<br>into measurable data by algorithms.</p>
+    <p>Some things are not meant to be quantified.</p>
+    <p>Emotions.<br>Dependency.<br>Hesitation.<br>The unexplainable ache deep inside.</p>
+    <p>And myself.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Not Built to Perform</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: "Times New Roman", serif;
+  background: #0a0a0a;
+}
+
+/* 背景 */
+.liquid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/1.png');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+/* 星光动画 */
+.home-star-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  pointer-events: none;
+}
+.home-star {
+  position: absolute;
+  background: #fff;
+  border-radius: 50%;
+  animation: twinkle 3s infinite ease-in-out;
+}
+@keyframes twinkle {
+  0%,100% { opacity: 0.2; transform: scale(0.7); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* 布局 */
+.intro-page {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3.5rem;
+  padding: 0 5vw;
+}
+
+/* 标题 */
+.intro-title {
+  font-size: clamp(2.2rem, 7vw, 5rem);
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+  text-align: center;
+}
+
+/* 菜单 */
+.menu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  text-align: center;
+}
+.menu-item {
+  font-size: clamp(1.3rem, 3.5vw, 2.2rem);
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  opacity: 0.9;
+}
+.menu-item:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+</style>
+</head>
+
+<body>
+  <!-- 背景 -->
+  <div class="liquid-background"></div>
+  <!-- 星光 -->
+  <div class="home-star-layer" id="starLayer"></div>
+
+  <!-- 内容 -->
+  <div class="intro-page">
+    <div class="intro-title">Not Built to Perform</div>
+    <div class="menu-list">
+      <a href="pages/about.html" class="menu-item">About</a>
+      <a href="pages/archive.html" class="menu-item">Archive</a>
+      <a href="pages/home.html" class="menu-item">Home</a>
+      <a href="pages/lab.html" class="menu-item">Lab</a>
+      <a href="pages/manifesto.html" class="menu-item">Manifesto</a>
+    </div>
+  </div>
+
+<script>
+// 星光生成
+const starLayer = document.getElementById('starLayer');
+for(let i=0; i<50; i++){
+  const star = document.createElement('div');
+  star.className = 'home-star';
+  const size = Math.random() * 2 + 1 + 'px';
+  star.style.width = size;
+  star.style.height = size;
+  star.style.left = Math.random() * 100 + '%';
+  star.style.top = Math.random() * 100 + '%';
+  star.style.animationDelay = Math.random() * 3 + 's';
+  starLayer.appendChild(star);
+}
+</script>
+</body>
+</html>

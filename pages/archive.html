@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCHIVE</title>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #000;
+  font-family: "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
+}
+
+/* 背景 */
+.archive-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/4.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255,255,255,0.3);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* 返回按钮 */
+.back-btn {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  font-size: 1.2rem;
+  color: #000;
+  text-decoration: none;
+  z-index: 999;
+  font-weight: 700;
+}
+
+/* 主容器 */
+.container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 12vh 8vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* 主标题 */
+.main-title {
+  font-size: clamp(2.8rem, 8vw, 4.5rem);
+  font-weight: 900;
+  margin-bottom: 4rem;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+/* 菜单（4个项目）*/
+.menu {
+  width: 100%;
+  max-width: 900px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+  margin-bottom: 3rem;
+}
+.menu-item {
+  font-size: clamp(1.6rem, 5vw, 2.6rem);
+  font-weight: 800;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.3s;
+  padding: 0.5rem 1rem;
+}
+.menu-item:hover {
+  opacity: 0.7;
+}
+
+/* 内容区域 */
+.content {
+  width: 100%;
+  max-width: 900px;
+  display: none;
+  line-height: 1.8;
+}
+.content.active {
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 文字样式 */
+.section-title {
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  font-weight: 700;
+  margin: 1.5rem 0 1rem;
+  text-align: center;
+}
+.sub-title {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 700;
+  margin: 1.2rem 0 0.6rem;
+}
+.text {
+  font-size: clamp(1rem, 2.3vw, 1.15rem);
+  margin-bottom: 0.8rem;
+}
+strong {
+  font-weight: 900;
+}
+.quote {
+  font-style: italic;
+  margin: 1.2rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid #000;
+}
+</style>
+</head>
+
+<body>
+
+<div class="archive-bg"></div>
+<a href="../index.html" class="back-btn">← Back to Home</a>
+
+<div class="container">
+  <h1 class="main-title">ARCHIVE</h1>
+
+  <!-- 4个可点击菜单 -->
+  <div class="menu">
+    <div class="menu-item" onclick="toggle('research')">Research & Thesis</div>
+    <div class="menu-item" onclick="toggle('paper')">Published Paper</div>
+    <div class="menu-item" onclick="toggle('projects')">Projects</div>
+    <div class="menu-item" onclick="toggle('fiction')">Fiction Archive</div>
+  </div>
+
+  <!-- 1. Research -->
+  <div class="content" id="research">
+    <div class="section-title">Research & Thesis</div>
+    <div class="text"><strong>Rewriting Romantic Codes: A Feminist STS Analysis of AI-Driven Otome Games as Sociotechnical Imaginaries</strong></div>
+    <div class="text"><strong>Master Dissertation | Feminist STS；Game Studies；Digital Intimacy</strong></div>
+    <div class="text">A feminist Science and Technology Studies analysis of AI-driven otome games, examining how algorithmic systems construct gendered intimacy, emotional labor, and sociotechnical imaginaries through interactive romance mechanics.</div>
+    <div class="sub-title">Key Themes</div>
+    <div class="text">AI-mediated intimacy</div>
+    <div class="text">Gendered game mechanics</div>
+    <div class="text">Emotional algorithms</div>
+    <div class="text">Sociotechnical imaginaries of romance</div>
+    <div class="sub-title">Case Studies</div>
+    <div class="text">Hakuoki Kyoto Winds</div>
+    <div class="text">Love and Deepspace</div>
+    <div class="quote">“Technology is not neutral. Romance itself can become an interface.”</div>
+  </div>
+
+  <!-- 2. Paper -->
+  <div class="content" id="paper">
+    <div class="section-title">Published Paper</div>
+    <div class="text"><strong>Research on Library Reading Promotion Services from a Cultural Perspective: A Visualization Analysis Based on Knowledge Graphs</strong></div>
+    <div class="text"><strong>First Author / 2024 / ISSN 1006-1436</strong></div>
+    <div class="sub-title">Methods & Content</div>
+    <div class="text">Knowledge graph visualization</div>
+    <div class="text">Keyword co‑occurrence analysis</div>
+    <div class="text">Institutional collaboration mapping</div>
+    <div class="sub-title">Key Findings</div>
+    <div class="text">Rise of digital reading culture</div>
+    <div class="text">Transformation of public cultural services</div>
+    <div class="quote">“Reading promotion is not merely information distribution. It is also a cultural infrastructure.”</div>
+  </div>
+
+  <!-- 3. Projects -->
+  <div class="content" id="projects">
+    <div class="section-title">Projects</div>
+    <div class="sub-title">Huayi App</div>
+    <div class="text"><strong>Team Leader / Internet+ Innovation Competition</strong></div>
+    <div class="text">A digital platform for intangible cultural heritage preservation.</div>
+    <div class="sub-title">FireEye - Forest Fire Detection System</div>
+    <div class="text"><strong>Core Team Member</strong></div>
+    <div class="text">AI-powered wildfire perception system.</div>
+    <div class="sub-title">Public Library Service Innovation</div>
+    <div class="text"><strong>Project Leader</strong></div>
+    <div class="text">Post-pandemic digital transformation research.</div>
+  </div>
+
+  <!-- 4. Fiction -->
+  <div class="content" id="fiction">
+    <div class="section-title">Fiction Archive</div>
+    <div class="text"><strong>Parallel Timeline Rescue Plan</strong></div>
+    <div class="text"><strong>Long‑form Original Romance | IQIYI Literature</strong></div>
+    <div class="text"><strong>Link:</strong> https://wenxue.iqiyi.com/book/detail-l3zf31y6p5.html</div>
+    <div class="text"><strong>Created:</strong> Narrative, Character, Emotional pacing, Worldbuilding</div>
+    <div class="text"><strong>Themes:</strong> Parallel timelines, Emotional memory</div>
+  </div>
+
+</div>
+
+<script>
+// 切换内容显示/隐藏
+let current = null;
+function toggle(id) {
+  const el = document.getElementById(id);
+  if (current === el) {
+    el.classList.remove('active');
+    current = null;
+  } else {
+    document.querySelectorAll('.content').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    current = el;
+  }
+}
+</script>
+
+</body>
+</html>
