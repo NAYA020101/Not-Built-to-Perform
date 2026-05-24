@@ -3,9 +3,6 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
 <title>Not Built to Perform</title>
 <style>
 * {
@@ -27,7 +24,7 @@ html, body {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-image: url('/images/1.png');
+  background-image: url('images/1.png');
   background-size: cover;
   background-position: center;
   z-index: 1;
@@ -101,11 +98,12 @@ html, body {
   <div class="intro-page">
     <div class="intro-title">Not Built to Perform</div>
     <div class="menu-list">
-      <a href="/pages/about.html" class="menu-item">About</a>
-      <a href="/pages/archive.html" class="menu-item">Archive</a>
-      <a href="/pages/home.html" class="menu-item">Home</a>
-      <a href="/pages/lab.html" class="menu-item">Lab</a>
-      <a href="/pages/manifesto.html" class="menu-item">Manifesto</a>
+      <!-- ✅ 全部去掉前面的 /，就能正常跳转 -->
+      <a href="pages/about.html" class="menu-item">About</a>
+      <a href="pages/archive.html" class="menu-item">Archive</a>
+      <a href="pages/home.html" class="menu-item">Home</a>
+      <a href="pages/lab.html" class="menu-item">Lab</a>
+      <a href="pages/manifesto.html" class="menu-item">Manifesto</a>
     </div>
   </div>
 
