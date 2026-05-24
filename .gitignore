@@ -1,0 +1,10 @@
+# 过滤node_modules（开发依赖，完全不需要上传）
+node_modules/
+# 过滤系统文件
+.DS_Store
+Thumbs.db
+# 过滤编辑器文件
+.vscode/
+.idea/
+# 过滤日志文件
+*.log
