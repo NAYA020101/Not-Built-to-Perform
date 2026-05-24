@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About / Yifan LIU</title>
     <style>
-        /* 全局样式 */
         * {
             margin: 0;
             padding: 0;
@@ -19,20 +18,19 @@
             color: #fff;
         }
 
-        /* 背景 —— 路径已修复 ✅ */
+        /* ✅ 正确图片路径 */
         .about-bg {
             position: fixed;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
-            background-image: url('/images/2.png');
+            background-image: url('../images/2.png');
             background-size: cover;
             background-position: center;
             z-index: -2;
         }
 
-        /* 星光 */
         .about-star-layer {
             position: fixed;
             top: 0;
@@ -53,7 +51,6 @@
             50% { opacity: 1; transform: scale(1.2); }
         }
 
-        /* 返回主页按钮 */
         .back-btn {
             position: fixed;
             top: 2rem;
@@ -69,7 +66,6 @@
             opacity: 0.7;
         }
 
-        /* 布局 */
         .about-container {
             display: grid;
             grid-template-columns: 1fr 1.6fr;
@@ -98,14 +94,12 @@
 </head>
 <body class="about-page">
 
-    <!-- 返回主页按钮 —— 路径已修复 ✅ -->
-    <a href="/index.html" class="back-btn">← Back to Home</a>
+    <!-- ✅ 正确返回路径 -->
+    <a href="../index.html" class="back-btn">← Back to Home</a>
 
-    <!-- 背景 + 星光 -->
     <div class="about-bg"></div>
     <div class="about-star-layer"></div>
 
-    <!-- 页面内容 -->
     <div class="about-container">
         <div class="about-left">
             <h1 class="about-title">Yifan LIU / NAYA</h1>
