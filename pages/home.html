@@ -16,9 +16,10 @@
     overflow: hidden;
     font-family: "Times New Roman", serif;
     color: #fff;
+    background-color: #111;
   }
 
-  /* 背景 —— 已修复 ✅ */
+  /* ✅ 背景图路径已修复 */
   .home-bg {
     position: fixed;
     top: 50%;
@@ -26,7 +27,7 @@
     width: 70%;
     height: 75%;
     transform: translate(-50%, -50%);
-    background-image: url('/images/3.png');
+    background-image: url('../images/3.png');
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -40,14 +41,15 @@
     top: 2rem;
     left: 2rem;
     font-size: 1.1rem;
-    color: #000;
+    color: #fff;
     text-decoration: none;
     z-index: 999;
     font-weight: bold;
-    transition: opacity 0.3s;
+    transition: all 0.3s ease;
   }
   .back-btn:hover {
     opacity: 0.7;
+    transform: translateX(-3px);
   }
 
   /* 居中布局 */
@@ -57,6 +59,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 0 5vw;
   }
   .inner-content {
     text-align: center;
@@ -66,9 +69,10 @@
     margin: 1.5rem 0;
     opacity: 0.9;
     animation: breathe 2.8s infinite ease-in-out;
+    text-shadow: 0 0 12px rgba(255,255,255,0.2);
   }
 
-  /* 呼吸跳动效果 */
+  /* 呼吸效果 */
   @keyframes breathe {
     0%, 100% {
       transform: translateY(0);
@@ -80,7 +84,6 @@
     }
   }
 
-  /* 错开动画延时 */
   .inner-content p:nth-child(1) { animation-delay: 0s; }
   .inner-content p:nth-child(2) { animation-delay: 0.2s; }
   .inner-content p:nth-child(3) { animation-delay: 0.4s; }
@@ -89,8 +92,8 @@
 
 <body class="home-page">
 
-<!-- 返回按钮已修复 ✅ -->
-<a href="/index.html" class="back-btn">← Back to Home</a>
+<!-- ✅ 返回路径已修复 -->
+<a href="../index.html" class="back-btn">← Back to Home</a>
 <div class="home-bg"></div>
 
 <div class="center-wrap">
