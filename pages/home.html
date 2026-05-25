@@ -19,7 +19,7 @@
     background-color: #111;
   }
 
-  /* ✅ 背景图路径已修复 */
+  /* ✅ 背景图路径修复（最稳写法） */
   .home-bg {
     position: fixed;
     top: 50%;
@@ -27,7 +27,7 @@
     width: 70%;
     height: 75%;
     transform: translate(-50%, -50%);
-    background-image: url('../images/3.png');
+    background-image: url('images/3.png'); /* 这里改了 */
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -92,8 +92,7 @@
 
 <body class="home-page">
 
-<!-- ✅ 返回路径已修复 -->
-<a href="../index.html" class="back-btn">← Back to Home</a>
+<a href="index.html" class="back-btn">← Back to Home</a> <!-- 返回路径也修复了 -->
 <div class="home-bg"></div>
 
 <div class="center-wrap">
